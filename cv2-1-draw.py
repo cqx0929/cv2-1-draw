@@ -51,7 +51,7 @@ class Drawer(object):
         if cv2.waitKey(0) > 0:
             cv2.destroyAllWindows()
 
-        cv2.imwrite('img.jpg', np.asarray(self.bgr_matrix*255, dtype=int))
+        cv2.imwrite('img.jpg', np.asarray(self.bgr_matrix*255, dtype=int), [cv2.IMWRITE_JPEG_QUALITY, 100])
 
 
 if __name__ == "__main__":
